@@ -12,11 +12,6 @@
 #endif
 
 
-// #define 64 64
-// #define 32 32
-
-// int 10 = 10;
-
 int display_width = 64 * 10;
 int display_height = 32 * 10;
 
@@ -26,7 +21,7 @@ void keyboardUp(unsigned char ikey, int x, int y);
 void keyboardDown(unsigned char ikey, int x, int y);
 
 #define DRAWWITHTEXTURE
-// typedef unsigned __int8 u8;
+
 uint8_t screenData[32][64][3];
 void setupTexture();
 
