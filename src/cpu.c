@@ -5,6 +5,8 @@
 #include <GL/glut.h>
 #include "chip8.h"
 
+/* Some workaround for delay in *NIX and Win systems. Tested on Linux, works well */
+
 #ifdef _WIN32
 #include <Windows.h>
 #else
