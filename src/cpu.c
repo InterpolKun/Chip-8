@@ -173,7 +173,7 @@ void keyboardDown(unsigned char ikey, int x, int y)
 		exit(0);
 
 	if(ikey == '1')         key[0x1] = 1;
-    else if(ikey == '2')    key[0x2] = 1;
+	else if(ikey == '2')    key[0x2] = 1;
 	else if(ikey == '3')	key[0x3] = 1;
 	else if(ikey == '4')	key[0xC] = 1;
 
