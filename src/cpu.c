@@ -37,17 +37,17 @@ int main(int argc, char ** argv){
     loadRom(argv[1]);
 
     glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
 
-	glutInitWindowSize(display_width, display_height);
+    glutInitWindowSize(display_width, display_height);
     glutInitWindowPosition(320, 320);
-	glutCreateWindow("myChip8 (almost done)");
+    glutCreateWindow("myChip8 (almost done)");
 
-	glutDisplayFunc(display);
-	glutIdleFunc(display);
+    glutDisplayFunc(display);
+    glutIdleFunc(display);
     glutReshapeFunc(reshape_window);
-	glutKeyboardFunc(keyboardDown);
-	glutKeyboardUpFunc(keyboardUp);
+    glutKeyboardFunc(keyboardDown);
+    glutKeyboardUpFunc(keyboardUp);
 
 #ifdef DRAWWITHTEXTURE
 	setupTexture();
@@ -92,8 +92,8 @@ void updateTexture()
 
 	glBegin( GL_QUADS );
 		glTexCoord2d(0.0, 0.0);		glVertex2d(0.0,			  0.0);
-		glTexCoord2d(1.0, 0.0); 	glVertex2d(display_width, 0.0);
-		glTexCoord2d(1.0, 1.0); 	glVertex2d(display_width, display_height);
+		glTexCoord2d(1.0, 0.0); 	glVertex2d(display_width, 	  0.0);
+		glTexCoord2d(1.0, 1.0); 	glVertex2d(display_width, 	  display_height);
 		glTexCoord2d(0.0, 1.0); 	glVertex2d(0.0,			  display_height);
 	glEnd();
 }
@@ -104,8 +104,8 @@ void drawPixel(int x, int y)
 	glBegin(GL_QUADS);
 		glVertex3f((x * 10) + 0.0f,     (y * 10) + 0.0f,	 0.0f);
 		glVertex3f((x * 10) + 0.0f,     (y * 10) + 10, 0.0f);
-		glVertex3f((x * 10) + 10, (y * 10) + 10, 0.0f);
-		glVertex3f((x * 10) + 10, (y * 10) + 0.0f,	 0.0f);
+		glVertex3f((x * 10) + 10, 	(y * 10) + 10, 0.0f);
+		glVertex3f((x * 10) + 10, 	(y * 10) + 0.0f,	 0.0f);
 	glEnd();
 }
 
@@ -155,16 +155,16 @@ void display()
 
 void reshape_window(GLsizei w, GLsizei h)
 {
-	glClearColor(0.0f, 0.0f, 0.5f, 0.0f);
-	glMatrixMode(GL_PROJECTION);
+    glClearColor(0.0f, 0.0f, 0.5f, 0.0f);
+    glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0, w, h, 0);
     glMatrixMode(GL_MODELVIEW);
     glViewport(0, 0, w, h);
 
-	// Resize quad
-	display_width = w;
-	display_height = h;
+    // Resize quad
+    display_width = w;
+    display_height = h;
 }
 
 void keyboardDown(unsigned char ikey, int x, int y)
