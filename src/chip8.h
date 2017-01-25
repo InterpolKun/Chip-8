@@ -1,4 +1,4 @@
-/* This header file contain the main functions and variables for chip8 emulating cycle */
+/* This header file contains the main functions and variables for chip8 emulating cycle */
 
 unsigned char chip8_font[80] = {
   0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
