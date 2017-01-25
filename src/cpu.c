@@ -129,7 +129,7 @@ void display()
     #ifdef _WIN32
     Sleep(30);
     #else
-    usleep(4000);  /* sleep for 100 milliSeconds */
+    usleep(4000);  /* sleep for N milliSeconds */
     #endif
 
 	emulate();
